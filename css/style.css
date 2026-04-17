@@ -4,3 +4,37 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: sans-serif;
+}
+
+/* Container size and basic style */
+
+.container
+{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 15px
+}
+
+/* debug class to see borders */
+
+.container.debug {
+    border: 2px dashed red;
+}
+
+.card.debug {
+    border: 2px dotted blue;
+}
+
+.small-text {
+    font-size: 0.75rem;
+}
+
+.title>.small-text, .card:nth-child(odd)>.small-text {
+    color: grey;
+}
+
+
+
