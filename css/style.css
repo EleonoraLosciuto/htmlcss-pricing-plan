@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+:root {
+    --cardgap: 25px;
+    --colnum: 3;
+}
+
 body {
     font-family: sans-serif;
 }
@@ -14,8 +19,9 @@ body {
 .container
 {
     max-width: 800px;
+    min-width: 400px;
     margin: 0 auto;
-    padding: 15px
+    padding: 25px
 }
 
 /* debug class to see borders */
@@ -28,13 +34,70 @@ body {
     border: 2px dotted blue;
 }
 
+/* Cards dimension and position */
+.flex-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap: var(--cardgap);
+    justify-content: center;
+}
+
+.flex-cards .card {
+    padding: 25px 30px;
+    min-width: 225px;
+    flex-basis: calc( (100% - (var(--cardgap) * (var(--colnum) - 1)) ) / var(--colnum) );
+    border-radius: 24px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Small text and grey text */
+
 .small-text {
-    font-size: 0.75rem;
+    font-size: 0.6rem;
 }
 
 .title>.small-text, .card:nth-child(odd)>.small-text {
     color: grey;
 }
+
+/* unorderd list (product features) style */
+
+.flex-cards ul {
+    font-size: 0.75rem;
+}
+
+.flex-cards .card ul>li {
+    list-style-type: none;
+}
+
+/*card backgroundad font-color using nth-child peudo-class with "odd" and "even"*/
+
+.card:nth-child(odd) {
+    background-color: #fff;
+}
+
+.card:nth-child(even) {
+    background-color: rgb(87, 69, 202);
+    color: #fff;
+}
+
+/* Cards layout and style*/
+.card .price, .card .discount {  /*all direct and indirect child-elements of .cards not being plan name or small text*/
+    text-align: center;
+    padding: 10px 0;
+}
+
+.card button {
+    margin: 10px auto;
+}
+
+.plan-feat *  {
+    padding: 5px 0;
+}
+
+
+
 
 
 
