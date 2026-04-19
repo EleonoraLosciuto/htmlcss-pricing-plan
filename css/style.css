@@ -142,9 +142,23 @@ body {
 }
 
 
+/*todo: toggle switch - position of placeholder and style of text*/
 
+.title {
+    position: relative;
+}
 
+.toggles-placeholder {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: grey;
+}
 
+.title>h1 {
+    display: inline-block;
+}
 
 
 
