@@ -149,7 +149,7 @@ body {
     position: relative;
 }
 
-.toggles-placeholder {
+.toggles-placeholder.desktop.tablet {
     display: inline-block;
     position: absolute;
     top: 25px;
@@ -161,8 +161,13 @@ body {
     display: inline-block;
 }
 
-/* I use media queries for tablet and mobile layout */
+/* toggles mobile display none */
 
+.toggles-placeholder.mobile {
+    display: none;
+}
+
+/* I use media queries for tablet and mobile layout */
 /*Tablet */
 
 @media screen and (max-width: 780px) {
@@ -189,5 +194,15 @@ body {
     }
 
     /* todo: move toggles to the center and below title */
+    .toggles-placeholder.desktop.tablet {
+        display: none;
+    }
+
+    .toggles-placeholder.mobile {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        color: grey;
+    }
 
 }
