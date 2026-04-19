@@ -18,13 +18,13 @@ body {
 
 .container
 {
-    max-width: 1024px;
-    min-width: 350px;
+    max-width: 1200px; /* desktop standard */
+    min-width: 320px; /* vertical mobile small standard */
     margin: 0 auto;
-    padding: 25px
+    padding: 25px;
 }
 
-/* debug class to see borders */
+/* debug class to see borders
 
 .container.debug {
     border: 2px dashed red;
@@ -33,6 +33,8 @@ body {
 .card.debug {
     border: 2px dotted blue;
 }
+
+*/
 
 /* Cards dimension, position and general rules */
 
@@ -45,8 +47,7 @@ body {
 }
 
 .flex-cards .card {
-    padding: 35px 30px;
-    min-width: 225px; /*todo: delete later - after Media Queries are done*/
+    padding: 35px 15px;
     max-width: 255px;
     flex-basis: calc( (100% - (var(--cardgap) * (var(--colnum) - 1)) ) / var(--colnum) ); /* NOTE: to change gap or columns number use variables in :root above!! */
     border-radius: 24px;
@@ -144,15 +145,15 @@ body {
 
 /*todo: toggle switch - position of placeholder and style of text*/
 
-.title {
+.container {
     position: relative;
 }
 
 .toggles-placeholder {
     display: inline-block;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 25px;
+    right: 50px;
     color: grey;
 }
 
@@ -160,5 +161,33 @@ body {
     display: inline-block;
 }
 
+/* I use media queries for tablet and mobile layout */
 
+/*Tablet */
 
+@media screen and (max-width: 780px) {
+    :root {
+        --colnum: 2; /* flex-basis will automatically change */
+    }
+
+    .flex-cards .card:last-child { /* Property on the last child to allow flex-grow */
+        max-width: none; /* to allow flex-grow to work */
+        flex-grow: 1;   
+    }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 568px) {
+    :root {
+        --colnum: 1; /* flex-basis will automatically change */
+    }
+   
+    /* re-establish max-width */
+    .flex-cards .card:last-child {
+        max-width: 255px;
+    }
+
+    /* todo: move toggles to the center and below title */
+
+}
