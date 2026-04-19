@@ -167,6 +167,8 @@ body {
     display: none;
 }
 
+
+
 /* I use media queries for tablet and mobile layout */
 /*Tablet */
 
@@ -175,7 +177,7 @@ body {
         --colnum: 2; /* flex-basis will automatically change */
     }
 
-    .flex-cards .card:last-child { /* Property on the last child to allow flex-grow */
+    .flex-cards .card { /* Property to allow flex-grow */
         max-width: none; /* to allow flex-grow to work */
         flex-grow: 1;   
     }
@@ -189,7 +191,7 @@ body {
     }
    
     /* re-establish max-width */
-    .flex-cards .card:last-child {
+    .flex-cards .card {
         max-width: 255px;
     }
 
