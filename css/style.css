@@ -36,7 +36,7 @@ body {
 
 */
 
-/* Cards dimension, position and general rules */
+/* Cards dimension, position and general rules (Desktop) */
 
 .flex-cards {
     display: flex;
@@ -64,17 +64,22 @@ body {
     margin: 10px auto;
 }
 
+/*vertical spacing and centre cards' elements */
 
-.card .price, .card .discount, .card .choose {  /*all direct and indirect child-elements of .cards not being plan name or small text*/
+.card .price, .card .discount, .card .choose {  
     text-align: center;
     padding: 10px 0;
 }
+
+/*vertical spacing of list of features*/
 
 .plan-feat *  {
     padding: 5px 0;
 }
 
-.card .currency {
+/*Font-size and bold text for currency and price inside cards*/
+
+.card .currency { 
     font-size: 1rem;
     Font-weight: 600;
 }
@@ -195,7 +200,12 @@ body {
         max-width: 255px;
     }
 
-    /* todo: move toggles to the center and below title */
+    /*Order: Professional plan on top*/
+    .flex-cards .card.professional {
+        order: -1;
+    }
+
+    /* toggles mobile: center and below title */
     .toggles-placeholder.desktop.tablet {
         display: none;
     }
