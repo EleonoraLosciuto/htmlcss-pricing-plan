@@ -186,6 +186,13 @@ body {
         max-width: none; /* to allow flex-grow to work */
         flex-grow: 1;   
     }
+
+    /*BONUS: feature for tablet to split in two columns*/
+
+    .flex-cards > .card.ultimate > .plan-feat ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* Mobile */

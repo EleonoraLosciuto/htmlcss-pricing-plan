@@ -4,7 +4,7 @@ This project is the fifth exercise in the context of a Web Development Master Co
 ## TASK
 The task is re-creating a web-page, provided by the teacher, by using HTML and CSS. This webpage is landing page showing 3 different price plans and the features included in each "package" &#40;for each price&#41;. The objective is to obtain a finalized page with responsive layout focused on structural CSS and clean HTML architecture:
 
-*Focus: Flexbox/Grid, Media Queries and semantic HTML. The approach used in this case is <strong>Desktop-First</strong>. Than, by using media queries, I added the max-width breakpoints for tablets and mobile.
+* Focus: Flexbox/Grid, Media Queries and semantic HTML. The approach used in this case is <strong>Desktop-First</strong>. Than, by using media queries, I added the max-width breakpoints for tablets and mobile.
 * Bonus tasks:
 1. Tablet view: third card takes the whole space horizontally.
 2. Tablet view: third card's list of features in two columns.
