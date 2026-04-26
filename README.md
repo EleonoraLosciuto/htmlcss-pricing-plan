@@ -4,8 +4,8 @@ This project is the fifth exercise in the context of a Web Development Master Co
 ## TASK
 The task is re-creating a web-page, provided by the teacher, by using HTML and CSS. This webpage is landing page showing 3 different price plans and the features included in each "package" &#40;for each price&#41;. The objective is to obtain a finalized page with responsive layout focused on structural CSS and clean HTML architecture:
 
-*Focus: Flexbox/Grid, Media Queries and semantic HTML. The approach used in this case is <b>Desktop-First<b>. Than, by using media queries, I added the max-width breakpoints for tablets and mobile.
-*Bonus tasks:
+*Focus: Flexbox/Grid, Media Queries and semantic HTML. The approach used in this case is <strong>Desktop-First</strong>. Than, by using media queries, I added the max-width breakpoints for tablets and mobile.
+* Bonus tasks:
 1. Tablet view: third card takes the whole space horizontally.
 2. Tablet view: third card's list of features in two columns.
 
@@ -43,11 +43,13 @@ Htmlcss-pricing-plan/ <br>
 ![Change Card Order](./screenshots/screencapture-mq-1.png) 
 
 ## TECH STACK
+
 * HTML5: semantic elements
 * CSS3: custom properties / variables + Media queries
 * VSCode: IDE
 
 ## FEATURES
+
 * all elements are nested in main: I consider the title to not be an header because it includes relevant information about the company and the cards shown below.
 * .container div to manage layout.
 * debug class to show borders and manage styles and layout - only for developer use.
